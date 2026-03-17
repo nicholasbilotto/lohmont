@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  /* Editorial high-fashion palette */
+  --editorial-cream: #f5f0e8;
+  --editorial-paper: #faf8f5;
+  --editorial-ink: #0b0b0b;
+  --editorial-ink-muted: #2c2c2c;
+  --editorial-gray: #6b6b6b;
+  --editorial-accent: #e10000;
+  --editorial-accent-soft: rgba(225, 0, 0, 0.12);
+  --editorial-hairline: rgba(11, 11, 11, 0.08);
+  --editorial-hairline-strong: rgba(11, 11, 11, 0.14);
+  --editorial-dark-bg: #1a1a1a;
+  --editorial-dark-surface: #242424;
+  --editorial-dark-text: rgba(250, 248, 245, 0.95);
+  --editorial-dark-muted: rgba(250, 248, 245, 0.65);
+  --editorial-dark-hairline: rgba(250, 248, 245, 0.12);
+
+  --background: var(--editorial-paper);
+  --foreground: var(--editorial-ink);
+  --muted: var(--editorial-gray);
+  --surface: var(--editorial-cream);
+  --surface-2: #ebe6df;
+  --cta: var(--editorial-accent);
+  --trust: var(--editorial-accent);
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 7.5rem;
+  --spacing-5xl: 10rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--cta);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-editorial), ui-serif, Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: geometricPrecision;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background: var(--editorial-accent-soft);
+  color: var(--editorial-ink);
+}
+
+.lux-surface {
+  position: relative;
+  isolation: isolate;
+  background: var(--editorial-paper);
+}
+
+.hairline {
+  border-top: 1px solid var(--editorial-hairline);
+}
+
+.editorial-divider {
+  height: 1px;
+  background: var(--editorial-hairline);
+}
+
+/* Red box highlight behind key phrases (e.g. "Static Inventory", "Test Drives", "14 Days…") */
+.editorial-highlight {
+  background: var(--editorial-accent);
+  color: var(--editorial-paper) !important;
+  padding: 0.05em 0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--editorial-accent);
+  outline-offset: 3px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-pause:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+}
