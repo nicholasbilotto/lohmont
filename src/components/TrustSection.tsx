@@ -2,8 +2,8 @@ import Image from "next/image";
 import { IntegrationMarquee } from "./IntegrationMarquee";
 import { ProofBlocks } from "./ProofBlocks";
 
-// Replace with your cost-of-silence image URL (e.g. import crashImg from "../../public/crash.png")
-const COST_OF_SILENCE_IMAGE_SRC = "";
+const COST_OF_SILENCE_IMAGE_SRC =
+	"https://tln9b3aheyjeg0bd.public.blob.vercel-storage.com/crash.png";
 
 export function TrustSection() {
 	return (
@@ -37,7 +37,10 @@ export function TrustSection() {
 									priority
 								/>
 							) : (
-								<div className="w-full h-full bg-black/10" aria-hidden />
+								<div
+									className="w-full h-full bg-black/10"
+									aria-hidden
+								/>
 							)}
 						</div>
 						<div

@@ -32,8 +32,7 @@ export function Hero({ onCTAClick }: { onCTAClick: () => void }) {
 						filter: "saturate(0.95) contrast(1.06) brightness(0.88)",
 						transform: "scale(1.04)",
 					}}
-					src=""
-					// Replace with your hero video URL (e.g. /hero.mov)
+					src="https://tln9b3aheyjeg0bd.public.blob.vercel-storage.com/hero.mov"
 					title="Cinematic luxury automotive"
 				/>
 			</div>
