@@ -32,7 +32,8 @@ export function TrustSection() {
 								<Image
 									src={COST_OF_SILENCE_IMAGE_SRC}
 									alt=""
-									className="object-cover w-full h-full"
+									fill
+									className="object-cover"
 									sizes="(max-width: 1024px) 100vw, 50vw"
 									priority
 								/>
