@@ -78,7 +78,7 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 								"translateY(0)";
 						}}
 					>
-						Book a Call to Schedule Live Demo
+						Book a live demo
 					</button>
 				</div>
 			</div>

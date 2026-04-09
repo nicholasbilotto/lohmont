@@ -49,7 +49,7 @@ export function StickyCTA() {
 					(e.currentTarget as HTMLAnchorElement).style.opacity = "1";
 				}}
 			>
-				Book my strategy call
+				Schedule free live demo
 			</a>
 		</div>
 	);

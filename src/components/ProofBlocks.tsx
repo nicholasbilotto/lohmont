@@ -1,7 +1,19 @@
 const stats = [
-  { value: "94%", label: "Reduces missed inbound service and sales call rates by 94% during peak weekend hours." },
-  { value: "< 30s", label: "Accelerates lead-to-appointment times to under 30 seconds via CRM API integration." },
-  { value: "14 Days", label: "Rapid onboarding. The full cinematic promotional trailer and the AI voice agent are fully deployed within 14 days of contract signing." },
+  {
+    value: "100%",
+    label:
+      "Captures 100% of inbound sales and service inquiries, eliminating missed opportunities during peak weekend and after-hours.",
+  },
+  {
+    value: "< 30s",
+    label:
+      "Accelerates lead-to-appointment times to under 30 seconds via seamless, real-time CRM API integration.",
+  },
+  {
+    value: "14 Days",
+    label:
+      "Rapid onboarding. Your custom-trained AI voice receptionist and automated follow-up sequences are fully deployed and live in 14 days.",
+  },
 ];
 
 export function ProofBlocks({ dark = false }: { dark?: boolean }) {

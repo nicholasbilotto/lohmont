@@ -66,7 +66,8 @@ export function TrustSection() {
 								style={{
 									lineHeight: 1.6,
 									maxWidth: "32rem",
-									color: "var(--editorial-ink-muted)",
+									color: "var(--editorial-ink)",
+									fontWeight: 500,
 								}}
 							>
 								Luxury buyers buy from whoever answers first. Miss the
@@ -146,7 +147,7 @@ export function TrustSection() {
 									lineHeight: 1.25,
 								}}
 							>
-								The &quot;We Win When You Win&quot; Guarantee.
+								The &quot;You Can&apos;t Lose&quot; Guarantee.
 							</h2>
 							<p
 								style={{
@@ -157,7 +158,7 @@ export function TrustSection() {
 									fontWeight: 500,
 								}}
 							>
-								We build your AI concierge and guarantee 15 qualified
+								We build your AI infrastructure. We guarantee 15 qualified
 								test-drive appointments for your high-ticket inventory.
 							</p>
 							<div
@@ -184,9 +185,9 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									We take 100% of the execution risk. If we don&apos;t
-									generate 15 qualified test-drive appointments, you
-									don&apos;t pay the second half. Period.
+									We take 100% of the risk. If we don&apos;t generate 15
+									qualified test-drive appointments, you don&apos;t pay the
+									second half. You keep the infrastructure. We eat the cost.
 								</p>
 							</div>
 						</div>
@@ -215,7 +216,7 @@ export function TrustSection() {
 										marginBottom: "var(--spacing-xs)",
 									}}
 								>
-									The 14-Day Dealership Conversion Engine
+									The 14-Day Dealership Engine.
 								</h3>
 								<p
 									style={{
@@ -224,7 +225,7 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									What you get. No surprises.
+									Exactly what you get. No fluff. No surprises.
 								</p>
 							</div>
 							<div
@@ -233,16 +234,16 @@ export function TrustSection() {
 								}}
 							>
 								<DeliverableItem
-									title="Inbound AI Receptionist & Ad Campaigns"
-									detail="We launch targeted AI ad campaigns and plug in a 24/7 voice agent that answers every incoming call and web lead instantly. It qualifies buyers and books them directly into your CRM."
+									title="1. The 24/7 AI Closer & Ad System"
+									detail="We launch targeted ads and install a voice agent that answers the phone on the first ring, every single time. It qualifies the buyer, handles objections, and books the appointment straight into your CRM. It doesn't sleep, take breaks, or ask for a raise."
 								/>
 								<DeliverableItem
-									title="The 'Dead Lead' Reactivation Engine"
-									detail="Stop letting old leads rot. Our outbound AI SMS and voice infrastructure systematically reaches out to old prospects in your database to re-engage them and schedule showroom visits."
+									title="2. The 'Dead Lead' Cash Machine"
+									detail="You have dead leads rotting in your CRM. That is free money. Our outbound AI uses SMS and voice to wake up your old prospects, reactivate them, and pull them back into the showroom."
 								/>
 								<DeliverableItem
-									title="Administrative & Form Automation"
-									detail="Save your sales team hundreds of hours. We build automations that handle routine data entry, process loan application forms, and automatically update deal stages in your CRM."
+									title="3. The Admin Eliminator"
+									detail="Your top guys should be closing deals, not doing data entry. We automate the grunt work—loan applications, lead routing, and CRM updates. We buy your team back hundreds of hours so they can focus on selling metal."
 								/>
 							</div>
 						</div>
