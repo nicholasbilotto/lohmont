@@ -233,16 +233,16 @@ export function TrustSection() {
 								}}
 							>
 								<DeliverableItem
-									title="The 24/7 AI Sales Rep"
-									detail="Instant lead qualification and automated appointment scheduling written directly into your CRM."
+									title="Inbound AI Receptionist & Ad Campaigns"
+									detail="We launch targeted AI ad campaigns and plug in a 24/7 voice agent that answers every incoming call and web lead instantly. It qualifies buyers and books them directly into your CRM."
 								/>
 								<DeliverableItem
-									title="The Hollywood Hero-Video Hack"
-									detail="3x cinematic AI videos of your top-tier inventory delivered in hours, not weeks."
+									title="The 'Dead Lead' Reactivation Engine"
+									detail="Stop letting old leads rot. Our outbound AI SMS and voice infrastructure systematically reaches out to old prospects in your database to re-engage them and schedule showroom visits."
 								/>
 								<DeliverableItem
-									title='The "Midnight Million" Retargeting System'
-									detail="Automatic email sequencing 2–3 times weekly for interested parties."
+									title="Administrative & Form Automation"
+									detail="Save your sales team hundreds of hours. We build automations that handle routine data entry, process loan application forms, and automatically update deal stages in your CRM."
 								/>
 							</div>
 						</div>
