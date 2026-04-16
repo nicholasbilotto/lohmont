@@ -17,8 +17,8 @@ export default function Home() {
       <Hero onBookTestCallClick={scrollToBookCall} />
       <VSLSection />
       <TrustSection />
-      <FAQ />
       <ConversionClose />
+      <FAQ />
       <StickyCTA />
     </div>
   );

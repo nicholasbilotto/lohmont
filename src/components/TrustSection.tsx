@@ -160,9 +160,9 @@ export function TrustSection() {
 						</div>
 						<div style={{ padding: "var(--spacing-xl)" }}>
 							{[
-								{ label: "The 24/7 AI Closer", value: "$2,500/mo" },
-								{ label: "The Dead Lead Cash Machine", value: "$1,500/mo" },
-								{ label: "The Admin Eliminator", value: "$1,000/mo" },
+								{ label: "Relentless Revenue Receptionist", value: "$2,500/mo" },
+								{ label: "Dormant Deal Defibrillator", value: "$1,500/mo" },
+								{ label: "All-in AI Administrator", value: "$1,000/mo" },
 							].map(({ label, value }) => (
 								<div
 									key={label}
@@ -270,7 +270,7 @@ export function TrustSection() {
 									lineHeight: 1.25,
 								}}
 							>
-								The 60-Second Response Guarantee.
+								The &ldquo;You Can&apos;t Lose&rdquo; Guarantee.
 							</h2>
 							<p
 								style={{
@@ -281,8 +281,10 @@ export function TrustSection() {
 									fontWeight: 500,
 								}}
 							>
-								Every inbound lead gets a personal response in under 60
-								seconds. Night, weekend, holiday — no exceptions.
+								We guarantee 15 qualified test-drive appointments in your
+								first 30 days. If we don't hit that number, you don't pay
+								the second half. You keep the infrastructure. We eat the
+								entire cost.
 							</p>
 							<div
 								style={{
@@ -308,10 +310,9 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									We take 100% of the risk. If our AI ever misses the
-									60-second response window on an inbound lead, we credit
-									that month&apos;s invoice in full. You keep the
-									infrastructure either way.
+									We take 100% of the risk. 15 qualified test-drive
+									appointments in 30 days — or you don't pay the second
+									half and you keep the infrastructure. Period.
 								</p>
 							</div>
 						</div>
@@ -340,7 +341,7 @@ export function TrustSection() {
 										marginBottom: "var(--spacing-xs)",
 									}}
 								>
-									The 14-Day Dealership Engine.
+									The Lohmont Luxury Lead Lockdown.
 								</h3>
 								<p
 									style={{
@@ -358,16 +359,16 @@ export function TrustSection() {
 								}}
 							>
 								<DeliverableItem
-									title="1. The 24/7 AI Closer"
-									detail="A voice agent that answers the phone on the first ring, every single time. It qualifies the buyer, handles objections, and books the appointment straight into your CRM. It doesn't sleep, take breaks, or ask for a raise."
+									title="1. Relentless Revenue Receptionist"
+									detail="A voice agent trained specifically on your inventory. It answers on the first ring, 24 hours a day. It sounds indistinguishable from a human — pre-qualifies the buyer, handles objections, and books the showroom appointment directly into your CRM."
 								/>
 								<DeliverableItem
-									title="2. The 'Dead Lead' Cash Machine"
-									detail="You have dead leads rotting in your CRM. That is free money. Our outbound AI uses SMS and voice to wake up your old prospects, reactivate them, and pull them back into the showroom."
+									title="2. Dormant Deal Defibrillator"
+									detail="You have thousands of cold leads sitting in your CRM collecting dust. That is free money. We deploy outbound AI voice and SMS that follows up with them systematically, wakes them up, qualifies them, and pulls them back in for a test drive."
 								/>
 								<DeliverableItem
-									title="3. The Admin Eliminator"
-									detail="Your top guys should be closing deals, not doing data entry. We automate the grunt work—loan applications, lead routing, and CRM updates. We buy your team back hundreds of hours so they can focus on selling metal."
+									title="3. All-in AI Administrator"
+									detail="Your best sales guys are wasting 30% of their day doing grunt work. CRM updates, loan application form-fills, deal stage routing — the AI handles all data entry, instantly. You get your team's time back so they can focus on closing deals and moving metal."
 								/>
 							</div>
 						</div>
