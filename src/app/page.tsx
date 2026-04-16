@@ -3,6 +3,7 @@
 import { Hero } from "@/components/Hero";
 import { VSLSection } from "@/components/VSLSection";
 import { TrustSection } from "@/components/TrustSection";
+import { FAQ } from "@/components/FAQ";
 import { ConversionClose } from "@/components/ConversionClose";
 import { StickyCTA } from "@/components/StickyCTA";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero onBookTestCallClick={scrollToBookCall} />
       <VSLSection />
       <TrustSection />
+      <FAQ />
       <ConversionClose />
       <StickyCTA />
     </div>

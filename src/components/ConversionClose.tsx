@@ -35,29 +35,53 @@ export function ConversionClose() {
 							color: "var(--editorial-dark-muted)",
 							fontSize: "1.0625rem",
 							lineHeight: 1.6,
-							marginBottom: "var(--spacing-2xl)",
+							marginBottom: "var(--spacing-md)",
 							fontWeight: 500,
 						}}
 					>
 						Live in 14 days. Pick a time below—see if your dealership qualifies.
 					</p>
 
+					<p
+						className="mx-auto max-w-xl font-semibold"
+						style={{
+							color: "var(--editorial-accent)",
+							fontSize: "0.9375rem",
+							lineHeight: 1.6,
+							letterSpacing: "0.02em",
+							marginBottom: "var(--spacing-2xl)",
+						}}
+					>
+						Only taking 5 Orange County dealerships this quarter.
+					</p>
+
 					<div
-						className="flex flex-col items-center justify-center min-h-[640px] px-6 py-16"
+						className="flex flex-col items-center justify-center min-h-[280px] px-6 py-16"
 						style={{
 							border: "1px solid var(--editorial-dark-hairline)",
 							background: "var(--editorial-dark-surface)",
 						}}
 					>
 						<p
-							className="text-center font-semibold uppercase tracking-[0.12em] text-sm sm:text-base"
+							className="text-center"
 							style={{
-								fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
-								color: "var(--editorial-dark-text)",
-								lineHeight: 1.5,
+								color: "var(--editorial-dark-muted)",
+								fontSize: "1.0625rem",
+								lineHeight: 1.7,
+								fontWeight: 500,
 							}}
 						>
-							[CALENDLY WIDGET EMBED HERE]
+							Text or email us to schedule your demo:
+						</p>
+						<p
+							className="text-center font-semibold mt-3"
+							style={{
+								fontFamily: "var(--font-editorial), serif",
+								color: "var(--editorial-dark-text)",
+								fontSize: "1.25rem",
+							}}
+						>
+							hello@lohmont.com
 						</p>
 					</div>
 				</div>

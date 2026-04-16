@@ -124,6 +124,129 @@ export function TrustSection() {
 						</p>
 					</div>
 
+					{/* Value Stack */}
+					<div
+						style={{
+							border: "1px solid var(--editorial-hairline-strong)",
+							background: "var(--editorial-paper)",
+							marginBottom: "var(--spacing-4xl)",
+						}}
+					>
+						<div
+							style={{
+								padding: "var(--spacing-xl)",
+								borderBottom: "1px solid var(--editorial-hairline)",
+							}}
+						>
+							<div
+								className="text-xs uppercase font-bold tracking-[0.2em]"
+								style={{
+									color: "var(--editorial-accent)",
+									marginBottom: "var(--spacing-sm)",
+								}}
+							>
+								Everything included
+							</div>
+							<h3
+								className="font-serif text-xl sm:text-2xl font-semibold tracking-tight"
+								style={{
+									fontFamily: "var(--font-editorial), serif",
+									color: "var(--editorial-ink)",
+									lineHeight: 1.22,
+								}}
+							>
+								What $4,500/mo actually buys you.
+							</h3>
+						</div>
+						<div style={{ padding: "var(--spacing-xl)" }}>
+							{[
+								{ label: "The 24/7 AI Closer", value: "$2,500/mo" },
+								{ label: "The Dead Lead Cash Machine", value: "$1,500/mo" },
+								{ label: "The Admin Eliminator", value: "$1,000/mo" },
+							].map(({ label, value }) => (
+								<div
+									key={label}
+									className="flex items-baseline justify-between"
+									style={{
+										paddingTop: "var(--spacing-md)",
+										paddingBottom: "var(--spacing-md)",
+										borderBottom: "1px solid var(--editorial-hairline)",
+									}}
+								>
+									<span
+										style={{
+											color: "var(--editorial-ink)",
+											fontWeight: 500,
+											fontSize: "1rem",
+										}}
+									>
+										{label}
+									</span>
+									<span
+										style={{
+											color: "var(--editorial-ink-muted)",
+											fontWeight: 600,
+											fontSize: "0.9375rem",
+											whiteSpace: "nowrap",
+											marginLeft: "var(--spacing-lg)",
+										}}
+									>
+										{value}
+									</span>
+								</div>
+							))}
+							<div
+								className="flex items-baseline justify-between"
+								style={{ paddingTop: "var(--spacing-lg)" }}
+							>
+								<span
+									style={{
+										color: "var(--editorial-ink-muted)",
+										fontSize: "0.875rem",
+										fontWeight: 500,
+										textTransform: "uppercase",
+										letterSpacing: "0.1em",
+									}}
+								>
+									Total value
+								</span>
+								<span
+									style={{
+										color: "var(--editorial-ink-muted)",
+										fontWeight: 600,
+										textDecoration: "line-through",
+										fontSize: "1rem",
+									}}
+								>
+									$5,000/mo
+								</span>
+							</div>
+							<div
+								className="flex items-baseline justify-between"
+								style={{ paddingTop: "var(--spacing-sm)" }}
+							>
+								<span
+									className="font-serif text-lg font-semibold"
+									style={{
+										fontFamily: "var(--font-editorial), serif",
+										color: "var(--editorial-ink)",
+									}}
+								>
+									Your investment
+								</span>
+								<span
+									className="font-serif text-2xl font-bold"
+									style={{
+										fontFamily: "var(--font-editorial), serif",
+										color: "var(--editorial-accent)",
+									}}
+								>
+									$4,500/mo
+								</span>
+							</div>
+						</div>
+					</div>
+
 					<div
 						className="grid items-start lg:grid-cols-[1fr_1.5fr]"
 						style={{ gap: "var(--spacing-4xl)" }}
@@ -147,7 +270,7 @@ export function TrustSection() {
 									lineHeight: 1.25,
 								}}
 							>
-								The &quot;You Can&apos;t Lose&quot; Guarantee.
+								The 60-Second Response Guarantee.
 							</h2>
 							<p
 								style={{
@@ -158,8 +281,8 @@ export function TrustSection() {
 									fontWeight: 500,
 								}}
 							>
-								We build your AI infrastructure. We guarantee 15 qualified
-								test-drive appointments for your high-ticket inventory.
+								Every inbound lead gets a personal response in under 60
+								seconds. Night, weekend, holiday — no exceptions.
 							</p>
 							<div
 								style={{
@@ -175,7 +298,7 @@ export function TrustSection() {
 										marginBottom: "var(--spacing-sm)",
 									}}
 								>
-									The Penalty
+									The Guarantee
 								</h4>
 								<p
 									style={{
@@ -185,9 +308,10 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									We take 100% of the risk. If we don&apos;t generate 15
-									qualified test-drive appointments, you don&apos;t pay the
-									second half. You keep the infrastructure. We eat the cost.
+									We take 100% of the risk. If our AI ever misses the
+									60-second response window on an inbound lead, we credit
+									that month&apos;s invoice in full. You keep the
+									infrastructure either way.
 								</p>
 							</div>
 						</div>
@@ -234,8 +358,8 @@ export function TrustSection() {
 								}}
 							>
 								<DeliverableItem
-									title="1. The 24/7 AI Closer & Ad System"
-									detail="We launch targeted ads and install a voice agent that answers the phone on the first ring, every single time. It qualifies the buyer, handles objections, and books the appointment straight into your CRM. It doesn't sleep, take breaks, or ask for a raise."
+									title="1. The 24/7 AI Closer"
+									detail="A voice agent that answers the phone on the first ring, every single time. It qualifies the buyer, handles objections, and books the appointment straight into your CRM. It doesn't sleep, take breaks, or ask for a raise."
 								/>
 								<DeliverableItem
 									title="2. The 'Dead Lead' Cash Machine"

@@ -47,8 +47,9 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 						fontWeight: 500,
 					}}
 				>
-					We deploy autonomous AI infrastructure that captures inbound leads,
-					reactivates dead CRM contacts, and automates loan data entry. 24/7.
+					We install AI that responds to every inbound lead in under 60 seconds,
+					reactivates the dead contacts rotting in your CRM, and books
+					test-drive appointments around the clock — with zero lift from your team.
 				</h2>
 
 				<div className="mt-8 sm:mt-10 flex justify-center">

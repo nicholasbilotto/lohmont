@@ -42,7 +42,7 @@ export function AudioDemo({ className = "" }: { className?: string }) {
 					fontWeight: 500,
 				}}
 			>
-				This module is art-directed to demonstrate the UX. Add a real voice demo to unlock playback.
+				A real buyer call demo is coming soon.
 			</p>
 
 			<div className="flex-1 flex flex-col justify-center min-h-0 gap-3 overflow-y-auto">
@@ -86,7 +86,7 @@ export function AudioDemo({ className = "" }: { className?: string }) {
 							<div style={{ width: "0%", height: "100%", background: "var(--editorial-accent)" }} />
 						</div>
 						<p className="text-xs sm:text-sm mt-1.5" style={{ color: "var(--editorial-ink-muted)" }}>
-							Add the real demo audio later for playback.
+							Demo audio coming soon.
 						</p>
 					</div>
 				</div>
