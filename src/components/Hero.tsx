@@ -79,7 +79,7 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 								"translateY(0)";
 						}}
 					>
-						Book a live demo
+						Get Your Free Lead Reactivation Audit
 					</button>
 				</div>
 			</div>

@@ -49,7 +49,7 @@ export function StickyCTA() {
 					(e.currentTarget as HTMLAnchorElement).style.opacity = "1";
 				}}
 			>
-				Schedule free live demo
+				Get Your Free Lead Reactivation Audit
 			</a>
 		</div>
 	);

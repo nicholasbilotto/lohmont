@@ -281,10 +281,9 @@ export function TrustSection() {
 									fontWeight: 500,
 								}}
 							>
-								We guarantee 15 qualified test-drive appointments in your
-								first 30 days. If we don't hit that number, you don't pay
-								the second half. You keep the infrastructure. We eat the
-								entire cost.
+								Every inbound call, text, and web form gets a response
+								within 60 seconds — 24/7, 365 days a year. If we ever miss
+								that window, your next month is on us. Full stop.
 							</p>
 							<div
 								style={{
@@ -310,9 +309,9 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									We take 100% of the risk. 15 qualified test-drive
-									appointments in 30 days — or you don't pay the second
-									half and you keep the infrastructure. Period.
+									We take 100% of the risk. Every inbound lead — call,
+									text, or web form — gets a response in under 60 seconds,
+									24/7/365. Miss once and your next month is free. Period.
 								</p>
 							</div>
 						</div>
@@ -341,7 +340,7 @@ export function TrustSection() {
 										marginBottom: "var(--spacing-xs)",
 									}}
 								>
-									The Lohmont Luxury Lead Lockdown.
+									The Midnight Million System.
 								</h3>
 								<p
 									style={{

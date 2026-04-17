@@ -17,6 +17,12 @@ export function ConversionClose() {
 						className="w-12 h-0.5 mx-auto mb-6"
 						style={{ background: "var(--editorial-accent)" }}
 					/>
+					<div
+						className="text-xs uppercase font-bold tracking-[0.2em] mb-4"
+						style={{ color: "var(--editorial-accent)" }}
+					>
+						Free Pilot — No Cost. No Commitment.
+					</div>
 					<h2
 						className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-balance"
 						style={{
@@ -26,8 +32,8 @@ export function ConversionClose() {
 							lineHeight: 1.22,
 						}}
 					>
-						<span className="block">Stop bleeding revenue.</span>
-						<span className="block mt-2 sm:mt-3">Book your free live demo now.</span>
+						<span className="block">We&apos;ll reactivate your dead leads.</span>
+						<span className="block mt-2 sm:mt-3">At zero cost. Zero risk.</span>
 					</h2>
 					<p
 						className="mx-auto max-w-xl"
@@ -35,11 +41,14 @@ export function ConversionClose() {
 							color: "var(--editorial-dark-muted)",
 							fontSize: "1.0625rem",
 							lineHeight: 1.6,
-							marginBottom: "var(--spacing-md)",
+							marginBottom: "var(--spacing-lg)",
 							fontWeight: 500,
 						}}
 					>
-						Live in 14 days. Pick a time below—see if your dealership qualifies.
+						Give us your 30–90 day dead leads — full list, no cap. We run a
+						complete AI SMS reactivation campaign at no cost and no commitment.
+						You see real results before you spend a dollar on the Midnight
+						Million System.
 					</p>
 
 					<p
@@ -52,7 +61,7 @@ export function ConversionClose() {
 							marginBottom: "var(--spacing-2xl)",
 						}}
 					>
-						Only taking 5 Orange County dealerships this quarter.
+						Available to the first 5 founding Orange County dealerships only.
 					</p>
 
 					<div
@@ -63,6 +72,17 @@ export function ConversionClose() {
 						}}
 					>
 						<p
+							className="text-center font-semibold mb-2"
+							style={{
+								color: "var(--editorial-dark-text)",
+								fontSize: "1.125rem",
+								lineHeight: 1.5,
+								fontFamily: "var(--font-editorial), serif",
+							}}
+						>
+							Get Your Free Lead Reactivation Audit
+						</p>
+						<p
 							className="text-center"
 							style={{
 								color: "var(--editorial-dark-muted)",
@@ -71,7 +91,7 @@ export function ConversionClose() {
 								fontWeight: 500,
 							}}
 						>
-							Text or email us to schedule your demo:
+							Booking calendar coming soon. In the meantime, reach us at:
 						</p>
 						<p
 							className="text-center font-semibold mt-3"
