@@ -34,7 +34,7 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 						fontWeight: 700,
 					}}
 				>
-					Luxury Dealerships Lose An Average Of $179,000 Every Month. Not To Better Cars Or Better Prices. To Whoever Answered First.
+					Luxury Dealerships Lose An Average Of $179,000 Every Month.
 				</h1>
 
 				<h2
@@ -47,9 +47,7 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 						fontWeight: 500,
 					}}
 				>
-					We install AI that responds to every inbound lead in under 60 seconds,
-					reactivates the dead contacts rotting in your CRM, and books
-					test-drive appointments around the clock — with zero lift from your team.
+					Not to better cars or better prices. To whoever answered first. We install AI that responds to every lead in 60 seconds, reactivates dead CRM contacts, and books test drives 24/7. Zero lift from your team.
 				</h2>
 
 				<div className="mt-8 sm:mt-10 flex justify-center">

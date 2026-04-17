@@ -59,7 +59,7 @@ export function TrustSection() {
 									color: "var(--editorial-ink)",
 								}}
 							>
-								The average luxury dealership loses 3 to 5 serious buyers every weekend. Not to better cars. Not to better prices. To whoever picked up the phone first.
+								The Average OC Luxury Dealership Loses $1,860,000 A Year To Unanswered Calls.
 							</h2>
 							<p
 								className="text-base sm:text-lg"
@@ -70,9 +70,7 @@ export function TrustSection() {
 									fontWeight: 500,
 								}}
 							>
-								Luxury buyers buy from whoever answers first. Miss the
-								call... lose the deal. We plug the leak: AI that answers
-								every lead, 24/7.
+								78% of luxury buyers go with the first dealer to respond. The average dealership misses 1 in 3 calls. We don't miss any.
 							</p>
 						</div>
 					</div>
@@ -111,19 +109,6 @@ export function TrustSection() {
 							>
 								The &ldquo;You Can&apos;t Lose&rdquo; Guarantee.
 							</h2>
-							<p
-								style={{
-									color: "var(--editorial-ink-muted)",
-									fontSize: "1.125rem",
-									lineHeight: 1.6,
-									marginBottom: "var(--spacing-xl)",
-									fontWeight: 500,
-								}}
-							>
-								Every inbound call, text, and web form gets a response
-								within 60 seconds — 24/7, 365 days a year. If we ever miss
-								that window, your next month is on us. Full stop.
-							</p>
 							<div
 								style={{
 									border: "2px solid var(--editorial-accent)",
@@ -148,9 +133,7 @@ export function TrustSection() {
 										fontWeight: 500,
 									}}
 								>
-									We take 100% of the risk. Every inbound lead — call,
-									text, or web form — gets a response in under 60 seconds,
-									24/7/365. Miss once and your next month is free. Period.
+									We take 100% of the risk. Every inbound call, text, and web form gets a response in under 60 seconds, 24/7/365. Miss once and your next month is free. Period.
 								</p>
 							</div>
 						</div>
