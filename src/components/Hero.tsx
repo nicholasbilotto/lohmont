@@ -34,7 +34,7 @@ export function Hero({ onBookTestCallClick }: { onBookTestCallClick: () => void 
 						fontWeight: 700,
 					}}
 				>
-					Stop Losing $40,000 Deals to Missed Calls and Slow Follow-Ups.
+					Luxury Dealerships Lose An Average Of $179,000 Every Month. Not To Better Cars Or Better Prices. To Whoever Answered First.
 				</h1>
 
 				<h2

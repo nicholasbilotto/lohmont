@@ -59,7 +59,7 @@ export function TrustSection() {
 									color: "var(--editorial-ink)",
 								}}
 							>
-								One missed call = $40,000 lost. Year after year.
+								The average luxury dealership loses 3 to 5 serious buyers every weekend. Not to better cars. Not to better prices. To whoever picked up the phone first.
 							</h2>
 							<p
 								className="text-base sm:text-lg"
