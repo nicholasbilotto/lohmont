@@ -45,7 +45,7 @@ export function ConversionClose() {
 							fontWeight: 500,
 						}}
 					>
-						Give us your 30–90 day dead leads — full list, no cap. We run a
+						Give us your 90 day old dead leads. We run a
 						complete AI SMS reactivation campaign at no cost and no commitment.
 						You see real results before you spend a dollar on the Midnight
 						Million System.
@@ -106,25 +106,6 @@ export function ConversionClose() {
 					</div>
 				</div>
 			</section>
-
-			<footer
-				className="px-6 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
-				style={{
-					paddingTop: "var(--spacing-xl)",
-					paddingBottom: "var(--spacing-xl)",
-					borderTop: "2px solid var(--editorial-accent)",
-					background: "var(--editorial-dark-bg)",
-				}}
-			>
-				<div className="max-w-6xl mx-auto text-center">
-					<p
-						className="text-xs tracking-[0.12em] font-medium uppercase"
-						style={{ color: "var(--editorial-dark-muted)" }}
-					>
-						© {new Date().getFullYear()} Lohmont Agency
-					</p>
-				</div>
-			</footer>
 		</>
 	);
 }
