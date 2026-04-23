@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen lux-surface">
       <Hero onBookTestCallClick={scrollToBookCall} />
-      <VSLSection />
+      {/* <VSLSection /> */}
       <TrustSection />
       <ConversionClose />
       <FAQ />
