@@ -101,7 +101,7 @@ export function ConversionClose() {
 								fontSize: "1.25rem",
 							}}
 						>
-							hello@lohmont.com
+							nick@lohmont.com
 						</p>
 					</div>
 				</div>
