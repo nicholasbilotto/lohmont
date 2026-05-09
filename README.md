@@ -1,34 +1,46 @@
-# Lohmont Agency Website
+# Lohmont: Elegant Brand Transformation
 
-Conversion-focused B2B single-page landing page for luxury automotive AI arbitrage offering. Built per Implementation Guideline and Grand Slam Offer specifications.
+Lohmont is a conversion focused B2B landing page designed to demonstrate the power of Presence Over Noise. This project showcases a high conversion user experience with fluid animations and a minimalist aesthetic specifically tailored for luxury automotive AI solutions.
 
-## Stack
+## Key Features
 
-- Next.js 16 + React 19
-- TypeScript
-- Tailwind CSS v4
+- **Fluid Animations:** Leveraging Framer Motion for seamless transitions and scroll triggered reveals.
+- **Generative UI:** Subtle use of Simplex Noise to create organic and engaging background elements.
+- **Conversion Optimization:** Structured according to Grand Slam Offer specifications with clear trust building sections and proof blocks.
+- **Performance Optimized:** Built with Next.js 15 and Tailwind CSS 4 for lightning fast load times and modern styling.
 
-## Get Started
+## Tech Stack
 
-```bash
-npm install
-npm run dev
-```
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS 4
+- **Animation:** Framer Motion
+- **Performance:** React 19 Hydration
+- **Language:** TypeScript
 
-Open [http://localhost:3000](http://localhost:3000).
+## Preview
+![Lohmont Preview](./screenshots/lohmont_preview.png)
 
 ## Structure
 
-- **Hero** — Headline, subheadline, auto-playing video background, primary CTA
-- **VSL** — Video embed, delayed CTA (revealed after 2 min), audio demo widget
-- **Trust** — Integration marquee (VinSolutions, DriveCentric, AutoFi), proof blocks, Grand Slam guarantee
-- **Conversion Close** — Calendar placeholder, minimal footer
-- **Sticky CTA** — Floating action button after scroll
+- **Hero Section:** High impact headline with integrated video background and primary CTAs.
+- **VSL Section:** Optimized video sales letter embed with timed CTA reveals and audio demo widgets.
+- **Trust Building:** Integration marquees (VinSolutions, DriveCentric) and social proof blocks.
+- **Conversion Close:** Minimalist footer with scheduled calendar integrations.
 
-## Replace Placeholders
+## Installation
 
-1. **Hero video** — Swap `src` in `src/components/Hero.tsx` with your AI-generated exotic car clip
-2. **VSL** — Replace YouTube embed URL in `src/components/VSLSection.tsx`
-3. **Audio demo** — Add your AI voice sample URL in `src/components/AudioDemo.tsx`
-4. **Calendar** — Add Calendly/Cal.com iframe in `src/components/ConversionClose.tsx`
-5. **Integration logos** — Add VinSolutions, DriveCentric, AutoFi logos to `src/components/IntegrationMarquee.tsx`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nicholasbilotto/lohmont.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+---
+*Built with intention by Nicholas Bilotto*
