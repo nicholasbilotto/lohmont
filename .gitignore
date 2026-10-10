@@ -41,3 +41,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# visual QA captures
+/qa
+
+# raw camera files stay local
+*.dng
+
+# Claude session worktrees
+/.claude/worktrees/

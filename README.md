@@ -1,46 +1,54 @@
-# Lohmont: Elegant Brand Transformation
+# Lohmont
 
-Lohmont is a conversion focused B2B landing page designed to demonstrate the power of Presence Over Noise. This project showcases a high conversion user experience with fluid animations and a minimalist aesthetic specifically tailored for luxury automotive AI solutions.
+Site for Lohmont, a creative studio in Newport Beach. Websites, apps, social.
+The design and build brief lives in [docs/brief.md](docs/brief.md). Read it before changing direction.
 
-## Key Features
+## Stack
 
-- **Fluid Animations:** Leveraging Framer Motion for seamless transitions and scroll triggered reveals.
-- **Generative UI:** Subtle use of Simplex Noise to create organic and engaging background elements.
-- **Conversion Optimization:** Structured according to Grand Slam Offer specifications with clear trust building sections and proof blocks.
-- **Performance Optimized:** Built with Next.js 15 and Tailwind CSS 4 for lightning fast load times and modern styling.
+- Next.js 16 (App Router) + React 19 + TypeScript
+- Tailwind CSS v4 with design tokens in `src/app/globals.css`
+- GSAP 3 (ScrollTrigger, SplitText) + Lenis for motion
+- Vercel Analytics + Speed Insights
 
-## Tech Stack
+## Run
 
-- **Framework:** Next.js 15 (App Router)
-- **Styling:** Tailwind CSS 4
-- **Animation:** Framer Motion
-- **Performance:** React 19 Hydration
-- **Language:** TypeScript
+```bash
+npm install
+npm run dev -- --webpack
+```
 
-## Preview
-![Lohmont Preview](./screenshots/lohmont_preview.png)
+Turbopack's file watcher silently stops picking up edits in this checkout (the folder path
+contains a space, and Turbopack logs "Failed to benchmark file I/O" at startup). The webpack
+flag uses a different watcher and hot reload works. Production builds still use Turbopack and
+are unaffected. Renaming the parent folder to remove the space would likely fix Turbopack dev.
 
 ## Structure
 
-- **Hero Section:** High impact headline with integrated video background and primary CTAs.
-- **VSL Section:** Optimized video sales letter embed with timed CTA reveals and audio demo widgets.
-- **Trust Building:** Integration marquees (VinSolutions, DriveCentric) and social proof blocks.
-- **Conversion Close:** Minimalist footer with scheduled calendar integrations.
+- `src/app/` routes: `/` home, `/studio`, `/start` (project brief), `/specimen` (internal type comparison, remove before launch)
+- `src/components/` shared pieces: `Wordmark` (bespoke SVG), `Nav`, `Footer`, `Reveal` + `SplitLines`, `TransitionLink` + `Curtain`
+- `src/components/home/` home page sections
+- `src/content/site.ts` all copy, services, team, links. Edit copy here, not in components.
+- `src/lib/gsap.ts` plugin registration and the reduced-motion check
+- `src/lib/transition.ts` the ink curtain used between routes
 
-## Installation
+## Stills
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/nicholasbilotto/lohmont.git
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+Source images live in `assets/stills/` (raw `.dng` files are ignored by git).
+Derivatives in `public/stills/` and blur placeholders in `src/content/blur.ts` are generated:
 
----
-*Built with intention by Nicholas Bilotto*
+```bash
+node scripts/prep-stills.mjs
+```
+
+To convert a DNG on macOS first: `sips -s format jpeg -s formatOptions 95 in.dng --out assets/stills/out.jpg`
+
+## Form
+
+`/start` posts to a server action in `src/app/start/actions.ts`. Email delivery is not wired yet;
+briefs are logged to the server console until a transactional email provider is connected.
+
+## Motion rules
+
+- Every animated element carries `will-reveal` and is revealed by GSAP. A `noscript` style and the
+  `prefers-reduced-motion` rule restore visibility without JS.
+- Lenis and all reveals are disabled when the visitor prefers reduced motion.
