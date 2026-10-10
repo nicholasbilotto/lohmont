@@ -4,7 +4,7 @@ export const site = {
   location: "Newport Beach, CA",
   email: "nick@lohmont.com",
   instagram: "nickbilotto",
-  url: "https://lohmont.com",
+  url: "https://www.lohmont.com",
   title: "Lohmont — Creative studio, Newport Beach",
   description:
     "Lohmont is a creative studio in Newport Beach. Websites, apps, and social for brands with taste.",
