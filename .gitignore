@@ -56,3 +56,5 @@ next-env.d.ts
 /Images/
 /Hero Vid/
 /assets/video/*.mov
+/.resend-key
+/.playwright-mcp/
