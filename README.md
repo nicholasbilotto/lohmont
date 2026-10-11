@@ -33,7 +33,9 @@ are unaffected. Renaming the parent folder to remove the space would likely fix 
 
 ## Stills
 
-Source images live in `assets/stills/` (raw `.dng` files are ignored by git).
+Source images live in `assets/stills/` (raw `.dng` files and the camera's original drops in
+`Images/` are ignored by git). Copy a new still into `assets/stills/` with a short name, add it to
+`scripts/prep-stills.mjs`, and run the script.
 Derivatives in `public/stills/` and blur placeholders in `src/content/blur.ts` are generated:
 
 ```bash
@@ -44,8 +46,16 @@ To convert a DNG on macOS first: `sips -s format jpeg -s formatOptions 95 in.dng
 
 ## Form
 
-`/start` posts to a server action in `src/app/start/actions.ts`. Email delivery is not wired yet;
-briefs are logged to the server console until a transactional email provider is connected.
+`/start` posts to a server action in `src/app/start/actions.ts`, which delivers the brief through
+Resend (`src/lib/email.ts`). Env vars are documented in `.env.example`. `RESEND_API_KEY` is set by
+the Resend integration on the Vercel project. If delivery fails, the lead is logged server-side and
+the visitor is asked to email directly, so nothing is silently lost.
+
+## Hero video
+
+Source footage lives in `assets/video/` (ignored by git). The site serves two muted, seamless-loop
+encodes from `public/video/` (1080p for desktop, 720p for phones). To re-encode a new clip, see the
+ffmpeg command in `scripts/encode-hero.sh`.
 
 ## Motion rules
 
