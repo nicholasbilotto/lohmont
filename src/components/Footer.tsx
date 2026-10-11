@@ -4,10 +4,10 @@ import { site, team } from "@/content/site";
 
 export function Footer() {
   return (
-    <footer className="gutter pt-24 pb-8 sm:pt-32">
+    <footer className="gutter pt-28 pb-8 sm:pt-40">
       <Wordmark giant />
 
-      <div className="hairline mt-10 pt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
+      <div className="hairline mt-6 pt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <p className="label faint mb-3">Contact</p>
           <a href={`mailto:${site.email}`} className="link-draw block w-fit">

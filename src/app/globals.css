@@ -85,11 +85,10 @@ a {
   white-space: nowrap;
 }
 .wordmark-giant {
-  font-size: clamp(3rem, 15.2vw, 15rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  letter-spacing: 0.2em;
   font-weight: 500;
-  line-height: 0.9;
-  margin-right: -0.08em;
+  line-height: 1;
 }
 
 /* Type roles */
