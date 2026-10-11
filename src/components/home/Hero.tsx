@@ -1,33 +1,47 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, ScrollTrigger, SplitText, reducedMotion } from "@/lib/gsap";
 import { stills } from "@/content/blur";
 
+const SOURCES = { wide: "/video/hero-1080.mp4", narrow: "/video/hero-720.mp4" };
+
 export function Hero() {
   const section = useRef<HTMLElement>(null);
   const frame = useRef<HTMLDivElement>(null);
-  const img = useRef<HTMLDivElement>(null);
+  const media = useRef<HTMLDivElement>(null);
+  const video = useRef<HTMLVideoElement>(null);
   const h1 = useRef<HTMLHeadingElement>(null);
   const kicker = useRef<HTMLParagraphElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  // Load the loop only when motion is welcome and data isn't constrained.
+  useEffect(() => {
+    const v = video.current;
+    if (!v || reducedMotion()) return;
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (conn?.saveData) return;
+    v.muted = true;
+    v.src = window.innerWidth < 768 ? SOURCES.narrow : SOURCES.wide;
+    v.load();
+    v.play().catch(() => {});
+  }, []);
 
   useEffect(() => {
-    if (!section.current || !frame.current || !img.current || !h1.current) return;
+    if (!section.current || !frame.current || !media.current || !h1.current) return;
     if (reducedMotion()) {
       gsap.set([frame.current, h1.current, kicker.current], { opacity: 1 });
       return;
     }
     let split: SplitText | undefined;
     const ctx = gsap.context(() => {
-      // Entrance: the still unshutters from the bottom while settling in scale.
       gsap.set(frame.current, { opacity: 1, clipPath: "inset(100% 0 0 0)" });
-      gsap.set(img.current, { scale: 1.12 });
+      gsap.set(media.current, { scale: 1.12 });
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
       tl.to(frame.current, { clipPath: "inset(0% 0 0 0)", duration: 1.6, ease: "power4.inOut" }, 0.1)
-        .to(img.current, { scale: 1, duration: 2.2 }, 0.1);
+        .to(media.current, { scale: 1, duration: 2.2 }, 0.1);
 
-      // Statement: glyphs arrive out of blur, then the width axis relaxes.
       document.fonts.ready.then(() => {
         if (!h1.current) return;
         split = SplitText.create(h1.current, { type: "chars,words", charsClass: "inline-block" });
@@ -46,8 +60,7 @@ export function Hero() {
         gsap.fromTo(kicker.current, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1, delay: 1.3 });
       });
 
-      // Scroll: parallax the still, let the statement drift and fade.
-      gsap.to(img.current, {
+      gsap.to(media.current, {
         yPercent: 14,
         scale: 1.08,
         ease: "none",
@@ -70,17 +83,30 @@ export function Hero() {
   return (
     <section ref={section} className="relative h-[100svh] min-h-[600px] overflow-hidden">
       <div ref={frame} className="absolute inset-0 hero-mask will-reveal">
-        <div ref={img} className="absolute inset-0 will-change-transform">
+        <div ref={media} className="absolute inset-0 will-change-transform">
           <Image
-            src={stills.hero.src}
-            alt="A hazy coastline at dusk. Pale sea, dark rocks, warm sky."
+            src={stills.poster.src}
+            alt="A coastline at dusk. Pale sea, dark rocks, slow waves."
             fill
             priority
             sizes="100vw"
             placeholder="blur"
-            blurDataURL={stills.hero.blur}
+            blurDataURL={stills.poster.blur}
             className="object-cover"
-            style={{ objectPosition: "50% 62%" }}
+            style={{ objectPosition: "50% 60%" }}
+          />
+          <video
+            ref={video}
+            muted
+            loop
+            playsInline
+            autoPlay
+            preload="none"
+            aria-hidden="true"
+            tabIndex={-1}
+            onPlaying={() => setPlaying(true)}
+            className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-out"
+            style={{ objectPosition: "50% 60%", opacity: playing ? 1 : 0 }}
           />
         </div>
       </div>

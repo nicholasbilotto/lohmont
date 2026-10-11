@@ -1,27 +1,36 @@
 // Prepares stills for the site. Run: node scripts/prep-stills.mjs
-// Reads assets/stills/hero-full.jpg, writes optimized derivatives to public/stills
-// and a blur-placeholder map to src/content/blur.ts.
+// Reads source stills from assets/stills, writes optimized derivatives to
+// public/stills and a blur-placeholder map to src/content/blur.ts.
 import sharp from "sharp";
 import { writeFileSync, mkdirSync } from "node:fs";
 
 mkdirSync("public/stills", { recursive: true });
-const src = "assets/stills/hero-full.jpg";
 
 // Crops get a quiet print grade (less saturation, a touch more contrast) so the
-// set reads as one series. The hero stays untouched.
+// set reads as one series. The hero poster stays untouched so it matches the video.
 const grade = (s) => s.modulate({ saturation: 0.85 }).linear(1.04, -5);
 
+const src = {
+  coast: "assets/stills/hero-full.jpg",
+  poster: "assets/stills/hero-poster.jpg",
+  shaping: "assets/stills/shaping-bay.jpg",
+  barn: "assets/stills/barn.jpg",
+  pianoMan: "assets/stills/piano-man.jpg",
+  pianoWoman: "assets/stills/piano-woman.jpg",
+};
+
 const outputs = [
-  { name: "hero", op: (s) => s.resize({ width: 1920 }) },
-  { name: "cliff", op: (s) => grade(s.extract({ left: 300, top: 280, width: 640, height: 800 })) },
-  { name: "rocks", op: (s) => grade(s.extract({ left: 700, top: 380, width: 1220, height: 520 })) },
-  { name: "waves", op: (s) => grade(s.extract({ left: 0, top: 380, width: 700, height: 700 })) },
-  { name: "og", op: (s) => s.resize({ width: 1200, height: 630, fit: "cover" }) },
+  { name: "poster", src: src.poster, op: (s) => s.resize({ width: 1920 }) },
+  { name: "og", src: src.coast, op: (s) => s.resize({ width: 1200, height: 630, fit: "cover" }) },
+  { name: "shaping", src: src.shaping, op: (s) => grade(s.extract({ left: 400, top: 0, width: 864, height: 1080 })) },
+  { name: "barn", src: src.barn, op: (s) => grade(s.extract({ left: 0, top: 180, width: 1920, height: 823 })) },
+  { name: "pianoWoman", src: src.pianoWoman, op: (s) => grade(s.resize({ width: 1000 })) },
+  { name: "pianoMan", src: src.pianoMan, op: (s) => grade(s.extract({ left: 768, top: 0, width: 864, height: 1080 })) },
 ];
 
 const blur = {};
-for (const { name, op } of outputs) {
-  const base = op(sharp(src));
+for (const { name, src: input, op } of outputs) {
+  const base = op(sharp(input));
   await base.clone().jpeg({ quality: 80, mozjpeg: true }).toFile(`public/stills/${name}.jpg`);
   const tiny = await base.clone().resize({ width: 24 }).jpeg({ quality: 50 }).toBuffer();
   const meta = await sharp(`public/stills/${name}.jpg`).metadata();

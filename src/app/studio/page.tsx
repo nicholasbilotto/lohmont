@@ -26,12 +26,12 @@ export default function StudioPage() {
         <div className="col-span-12 md:col-span-5">
           <Reveal>
             <Image
-              src={stills.cliff.src}
-              width={stills.cliff.width}
-              height={stills.cliff.height}
-              alt=""
+              src={stills.pianoMan.src}
+              width={stills.pianoMan.width}
+              height={stills.pianoMan.height}
+              alt="A man in white sunglasses at a piano, in low warm light."
               placeholder="blur"
-              blurDataURL={stills.cliff.blur}
+              blurDataURL={stills.pianoMan.blur}
               sizes="(min-width: 768px) 40vw, 100vw"
               className="w-full h-auto"
             />

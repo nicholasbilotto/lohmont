@@ -1,5 +1,8 @@
 "use server";
 
+import { deliverBrief } from "@/lib/email";
+import { site } from "@/content/site";
+
 export type BriefState = {
   status: "idle" | "sent" | "error";
   message?: string;
@@ -30,8 +33,16 @@ export async function sendBrief(_prev: BriefState, form: FormData): Promise<Brie
 
   const brief = { name, business, email, instagram, needs, budget, note, at: new Date().toISOString() };
 
-  // Email delivery is wired on day 3. Until then the brief is logged server-side only.
-  console.log("[brief]", JSON.stringify(brief));
+  const result = await deliverBrief(brief);
+  if (!result.ok) {
+    // Keep the lead in the logs so nothing is lost if delivery is misconfigured.
+    console.error("[brief] delivery failed:", result.reason, JSON.stringify(brief));
+    return {
+      status: "error",
+      message: `We couldn't send that just now. Email us directly at ${site.email}.`,
+    };
+  }
 
+  console.log("[brief] delivered", result.id ?? "");
   return { status: "sent" };
 }

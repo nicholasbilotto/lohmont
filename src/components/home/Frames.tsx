@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { stills } from "@/content/blur";
 
 const frames = [
-  { still: stills.cliff, caption: "Still 001", speed: -6, className: "col-span-7 md:col-span-4 md:row-span-2" },
-  { still: stills.rocks, caption: "Still 002", speed: 5, className: "col-span-12 md:col-span-7 md:col-start-6" },
-  { still: stills.waves, caption: "Still 003", speed: -3, className: "col-span-6 col-start-6 md:col-span-4 md:col-start-7" },
+  { still: stills.shaping, alt: "A surfboard on stands in a shaping bay, lit through a round window.", caption: "Still 001", speed: -6, className: "col-span-7 md:col-span-4 md:row-span-2" },
+  { still: stills.barn, alt: "A white barn at golden hour, a pickup parked in the grass, someone walking away.", caption: "Still 002", speed: 5, className: "col-span-12 md:col-span-7 md:col-start-6" },
+  { still: stills.pianoWoman, alt: "Someone at an upright piano, seen from behind, in warm light.", caption: "Still 003", speed: -3, className: "col-span-6 col-start-6 md:col-span-4 md:col-start-7" },
 ] as const;
 
 export function Frames() {
@@ -43,7 +43,7 @@ export function Frames() {
               src={f.still.src}
               width={f.still.width}
               height={f.still.height}
-              alt=""
+              alt={f.alt}
               placeholder="blur"
               blurDataURL={f.still.blur}
               sizes="(min-width: 768px) 50vw, 100vw"
