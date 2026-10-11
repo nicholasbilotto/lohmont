@@ -58,7 +58,7 @@ Mobile-first. Restaurant owners browse on phones.
 
 - One action: **Start a project**. Fields: name, business, what you need (web / app / social,
   multi), budget band, Instagram handle, short note. Honeypot for spam.
-- Delivered by transactional email to nick@lohmont.com. Thank-you page offers a call link
+- Delivered by transactional email to nickbilotto@gmail.com. Thank-you page offers a call link
   (optional, add when a scheduling link exists).
 - Footer: email and Instagram.
 

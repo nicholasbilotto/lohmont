@@ -2,7 +2,7 @@ export const site = {
   name: "Lohmont",
   descriptor: "Creative studio",
   location: "Newport Beach, CA",
-  email: "nick@lohmont.com",
+  email: "nickbilotto@gmail.com",
   instagram: "nickbilotto",
   url: "https://www.lohmont.com",
   title: "Lohmont — Creative studio, Newport Beach",
