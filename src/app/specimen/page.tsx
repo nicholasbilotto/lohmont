@@ -44,7 +44,7 @@ export default function Specimen() {
             We care about the first second. The weight of a line. The space around a word. The way a
             plate looks at seven in bad light.
           </p>
-          <p className="label mt-8">Creative studio · Newport Beach, CA · 01 / Studio · nick@lohmont.com</p>
+          <p className="label mt-8">Creative studio · Newport Beach, CA · 01 / Studio · nickbilotto@gmail.com</p>
         </section>
       ))}
     </div>
