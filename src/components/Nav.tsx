@@ -23,7 +23,7 @@ export function Nav() {
       <header className="fixed inset-x-0 top-0 z-50 gutter">
         <div className="flex items-center justify-between py-5 sm:py-6">
           <TransitionLink href="/" aria-label="Lohmont, home" className="block">
-            <Wordmark className="h-[13px] sm:h-[14px] w-auto" draw delay={0.2} />
+            <Wordmark className="text-[13px] sm:text-[14px]" draw delay={0.2} />
           </TransitionLink>
 
           <p className="label muted hidden md:block absolute left-1/2 -translate-x-1/2">

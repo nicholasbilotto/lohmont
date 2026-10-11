@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Martian_Mono } from "next/font/google";
+import { Geist, Martian_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -8,6 +8,13 @@ import { Curtain } from "@/components/Curtain";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
+
+const grotesk = Geist({
+  variable: "--font-grotesk",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  display: "swap",
+});
 
 const mono = Martian_Mono({
   variable: "--font-mono",
@@ -42,7 +49,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={mono.variable}>
+    <html lang="en" className={`${mono.variable} ${grotesk.variable}`}>
       <head>
         <noscript>
           <style>{`.will-reveal{opacity:1!important}`}</style>

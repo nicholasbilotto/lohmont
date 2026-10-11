@@ -3,68 +3,40 @@
 import { useEffect, useRef } from "react";
 import { gsap, reducedMotion } from "@/lib/gsap";
 
-// Bespoke LOHMONT lettering. Monoline, square-cut strokes, two pill O's.
-// Built on a 700x100 grid, seven cells of 96 with a 12-unit stroke.
-const PATHS = [
-  "M32 6V94H92",                       // L
-  "M158 6h0a30 30 0 0 1 30 30v28a30 30 0 0 1 -30 30h0a30 30 0 0 1 -30 -30V36a30 30 0 0 1 30 -30z", // O
-  "M224 6V94M280 6V94M224 50H280",     // H
-  "M320 94V6L352 58L384 6V94",         // M
-  "M446 6h0a30 30 0 0 1 30 30v28a30 30 0 0 1 -30 30h0a30 30 0 0 1 -30 -30V36a30 30 0 0 1 30 -30z", // O
-  "M512 94V6L568 94V6",                // N
-  "M602 6H674M638 6V94",               // T
-];
-
 export function Wordmark({
-  className,
+  className = "",
   draw = false,
   delay = 0,
-  title = "Lohmont",
+  giant = false,
 }: {
   className?: string;
+  /** Fade and settle in on mount. */
   draw?: boolean;
   delay?: number;
-  title?: string;
+  giant?: boolean;
 }) {
-  const ref = useRef<SVGSVGElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     if (!draw || !ref.current || reducedMotion()) return;
-    const paths = Array.from(ref.current.querySelectorAll<SVGPathElement>("path"));
     const ctx = gsap.context(() => {
-      paths.forEach((p) => {
-        const len = p.getTotalLength();
-        gsap.set(p, { strokeDasharray: len, strokeDashoffset: len, opacity: 1 });
-      });
-      gsap.to(paths, {
-        strokeDashoffset: 0,
-        duration: 1.4,
-        stagger: 0.09,
-        delay,
-        ease: "power3.inOut",
-      });
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, letterSpacing: giant ? "0.2em" : "0.4em", filter: "blur(6px)" },
+        { opacity: 1, letterSpacing: giant ? "0.08em" : "0.22em", filter: "blur(0px)", duration: 1.4, delay, ease: "power3.out", clearProps: "filter" }
+      );
     });
     return () => ctx.revert();
-  }, [draw, delay]);
+  }, [draw, delay, giant]);
 
   return (
-    <svg
+    <span
       ref={ref}
-      viewBox="0 0 700 100"
-      className={className}
-      role="img"
-      aria-label={title}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={12}
-      strokeLinecap="butt"
-      strokeLinejoin="miter"
-      strokeMiterlimit={4}
-      style={{ overflow: "visible" }}
+      className={`wordmark block ${giant ? "wordmark-giant" : ""} ${className}`}
+      style={draw ? { opacity: 0 } : undefined}
+      aria-label="Lohmont"
     >
-      {PATHS.map((d, i) => (
-        <path key={i} d={d} style={draw ? { opacity: 0 } : undefined} />
-      ))}
-    </svg>
+      Lohmont
+    </span>
   );
 }
